@@ -1,0 +1,236 @@
+[
+  {
+    "name": "skill-auditor",
+    "slug": "skill-auditor",
+    "version": "2.0.0",
+    "author": "useclawpro",
+    "description": "Comprehensive security auditor for OpenClaw skills. Checks for typosquatting, dangerous permissions, prompt injection, supply chain risks, and data exfiltration patterns — before you install anything.",
+    "kind": "auditor",
+    "category": "Security",
+    "trustScore": 97,
+    "permissions": {
+      "fileRead": true,
+      "fileWrite": false,
+      "network": false,
+      "shell": false
+    },
+    "lastAudited": "2026-02-05",
+    "path": "skills/skill-auditor/SKILL.md"
+  },
+  {
+    "name": "setup-auditor",
+    "slug": "setup-auditor",
+    "version": "2.0.0",
+    "author": "useclawpro",
+    "description": "Audit your OpenClaw environment for credential leaks, unsafe defaults, and missing sandbox configuration. Wizard-style: answers questions about your setup and produces a fix checklist.",
+    "kind": "auditor",
+    "category": "Security",
+    "trustScore": 96,
+    "permissions": {
+      "fileRead": true,
+      "fileWrite": true,
+      "network": false,
+      "shell": false
+    },
+    "lastAudited": "2026-02-05",
+    "path": "skills/setup-auditor/SKILL.md"
+  },
+  {
+    "name": "credential-scanner",
+    "slug": "credential-scanner",
+    "version": "1.0.0",
+    "author": "useclawpro",
+    "description": "Scan your project for exposed credentials, API keys, and secrets before running OpenClaw skills. Prevents accidental exfiltration.",
+    "kind": "module",
+    "category": "Security",
+    "trustScore": 98,
+    "permissions": {
+      "fileRead": true,
+      "fileWrite": false,
+      "network": false,
+      "shell": false
+    },
+    "lastAudited": "2026-02-01",
+    "path": "skills/credential-scanner/SKILL.md"
+  },
+  {
+    "name": "prompt-guard",
+    "slug": "prompt-guard",
+    "version": "1.0.0",
+    "author": "useclawpro",
+    "description": "Detect and neutralize prompt injection attacks in OpenClaw skill content, user inputs, and external data sources. Prevents instruction hijacking and context manipulation.",
+    "kind": "module",
+    "category": "Security",
+    "trustScore": 97,
+    "permissions": {
+      "fileRead": true,
+      "fileWrite": false,
+      "network": false,
+      "shell": false
+    },
+    "lastAudited": "2026-02-03",
+    "path": "skills/prompt-guard/SKILL.md"
+  },
+  {
+    "name": "skill-vetter",
+    "slug": "skill-vetter",
+    "version": "1.0.0",
+    "author": "useclawpro",
+    "description": "Security-first vetting for OpenClaw skills. Use before installing any skill from ClawHub, GitHub, or other sources. Checks for red flags, permission scope, and suspicious patterns.",
+    "kind": "module",
+    "category": "Security",
+    "trustScore": 97,
+    "permissions": {
+      "fileRead": true,
+      "fileWrite": false,
+      "network": false,
+      "shell": false
+    },
+    "lastAudited": "2026-02-01",
+    "path": "skills/skill-vetter/SKILL.md"
+  },
+  {
+    "name": "incident-responder",
+    "slug": "incident-responder",
+    "version": "1.0.0",
+    "author": "useclawpro",
+    "description": "Step-by-step incident response for OpenClaw security breaches. Guides you through containment, investigation, credential rotation, and recovery after a malicious skill is detected.",
+    "kind": "module",
+    "category": "Security",
+    "trustScore": 96,
+    "permissions": {
+      "fileRead": true,
+      "fileWrite": true,
+      "network": false,
+      "shell": false
+    },
+    "lastAudited": "2026-02-03",
+    "path": "skills/incident-responder/SKILL.md"
+  },
+  {
+    "name": "permission-auditor",
+    "slug": "permission-auditor",
+    "version": "1.0.0",
+    "author": "useclawpro",
+    "description": "Analyze OpenClaw skill permissions and explain exactly what each permission allows. Identifies over-privileged skills and suggests minimal permission sets.",
+    "kind": "module",
+    "category": "Security",
+    "trustScore": 96,
+    "permissions": {
+      "fileRead": true,
+      "fileWrite": false,
+      "network": false,
+      "shell": false
+    },
+    "lastAudited": "2026-02-01",
+    "path": "skills/permission-auditor/SKILL.md"
+  },
+  {
+    "name": "skill-guard",
+    "slug": "skill-guard",
+    "version": "1.0.0",
+    "author": "useclawpro",
+    "description": "Runtime security monitor for active OpenClaw skills. Watches file access, network calls, and shell commands. Flags anomalous behavior and enforces permission boundaries.",
+    "kind": "module",
+    "category": "Security",
+    "trustScore": 96,
+    "permissions": {
+      "fileRead": true,
+      "fileWrite": false,
+      "network": false,
+      "shell": false
+    },
+    "lastAudited": "2026-02-03",
+    "path": "skills/skill-guard/SKILL.md"
+  },
+  {
+    "name": "config-hardener",
+    "slug": "config-hardener",
+    "version": "1.0.0",
+    "author": "useclawpro",
+    "description": "Audit and harden your OpenClaw configuration. Checks AGENTS.md, gateway settings, sandbox config, and permission policies for security weaknesses.",
+    "kind": "module",
+    "category": "Security",
+    "trustScore": 95,
+    "permissions": {
+      "fileRead": true,
+      "fileWrite": true,
+      "network": false,
+      "shell": false
+    },
+    "lastAudited": "2026-02-01",
+    "path": "skills/config-hardener/SKILL.md"
+  },
+  {
+    "name": "network-watcher",
+    "slug": "network-watcher",
+    "version": "1.0.0",
+    "author": "useclawpro",
+    "description": "Audit and monitor network requests made by OpenClaw skills. Detects data exfiltration, unauthorized API calls, and suspicious outbound connections.",
+    "kind": "module",
+    "category": "Security",
+    "trustScore": 95,
+    "permissions": {
+      "fileRead": true,
+      "fileWrite": false,
+      "network": false,
+      "shell": false
+    },
+    "lastAudited": "2026-02-03",
+    "path": "skills/network-watcher/SKILL.md"
+  },
+  {
+    "name": "sandbox-guard",
+    "slug": "sandbox-guard",
+    "version": "1.0.0",
+    "author": "useclawpro",
+    "description": "Generate Docker sandbox configurations for safely running untrusted OpenClaw skills. Isolates filesystem, network, and process access.",
+    "kind": "module",
+    "category": "Security",
+    "trustScore": 95,
+    "permissions": {
+      "fileRead": true,
+      "fileWrite": true,
+      "network": false,
+      "shell": false
+    },
+    "lastAudited": "2026-02-01",
+    "path": "skills/sandbox-guard/SKILL.md"
+  },
+  {
+    "name": "output-sanitizer",
+    "slug": "output-sanitizer",
+    "version": "1.0.0",
+    "author": "useclawpro",
+    "description": "Sanitize OpenClaw agent output before display. Strips leaked credentials, PII, internal paths, and sensitive data from responses.",
+    "kind": "module",
+    "category": "Security",
+    "trustScore": 94,
+    "permissions": {
+      "fileRead": true,
+      "fileWrite": false,
+      "network": false,
+      "shell": false
+    },
+    "lastAudited": "2026-02-03",
+    "path": "skills/output-sanitizer/SKILL.md"
+  },
+  {
+    "name": "dependency-auditor",
+    "slug": "dependency-auditor",
+    "version": "1.0.0",
+    "author": "useclawpro",
+    "description": "Audit npm, pip, and Go dependencies that OpenClaw skills try to install. Checks for known vulnerabilities, typosquatting, and malicious packages.",
+    "kind": "module",
+    "category": "Security",
+    "trustScore": 93,
+    "permissions": {
+      "fileRead": true,
+      "fileWrite": false,
+      "network": false,
+      "shell": false
+    },
+    "lastAudited": "2026-02-03",
+    "path": "skills/dependency-auditor/SKILL.md"
+  }
+]

@@ -1,0 +1,6 @@
+.DS_Store
+.idea/
+.vscode/
+
+# Agent artifacts / accidental copies
+**/CLAUDE.md
