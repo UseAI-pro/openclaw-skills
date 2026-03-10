@@ -1,17 +1,27 @@
 ---
 name: skill-guard
-version: 1.0.0
-description: "Runtime security monitor for active OpenClaw skills. Watches file access, network calls, and shell commands. Flags anomalous behavior and enforces permission boundaries."
-kind: module
-author: useclawpro
-category: Security
-trustScore: 96
-permissions:
-  fileRead: true
-  fileWrite: false
-  network: false
-  shell: false
-lastAudited: "2026-02-03"
+description: Runtime security monitor for active OpenClaw skills. Watches file access, network calls, and shell commands.
+  Flags anomalous behavior and enforces permission boundaries.
+metadata:
+  short-description: Monitor active OpenClaw skills for runtime behavior that violates declared permissions.
+  why: Catch runtime drift between declared permissions and actual behavior before damage spreads.
+  what: Provides a runtime monitoring module for file access, network calls, shell use, and anomalies.
+  how: Uses permission-boundary checks and suspicious-behavior signals during active skill execution.
+  results: Produces runtime monitoring findings and escalation signals for suspicious behavior.
+  version: 1.0.0
+  updated: '2026-03-10T03:42:30Z'
+  jtbd-1: When I need runtime visibility into whether a running skill is exceeding its declared boundaries.
+  audit:
+    kind: module
+    author: useclawpro
+    category: Security
+    trust-score: 96
+    last-audited: '2026-02-03'
+    permissions:
+      file-read: true
+      file-write: false
+      network: false
+      shell: false
 ---
 
 # Skill Guard

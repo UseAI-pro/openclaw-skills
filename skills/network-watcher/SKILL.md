@@ -1,17 +1,27 @@
 ---
 name: network-watcher
-version: 1.0.0
-description: "Audit and monitor network requests made by OpenClaw skills. Detects data exfiltration, unauthorized API calls, and suspicious outbound connections."
-kind: module
-author: useclawpro
-category: Security
-trustScore: 95
-permissions:
-  fileRead: true
-  fileWrite: false
-  network: false
-  shell: false
-lastAudited: "2026-02-03"
+description: Audit and monitor network requests made by OpenClaw skills. Detects data exfiltration, unauthorized API calls,
+  and suspicious outbound connections.
+metadata:
+  short-description: Inspect outbound connections and exfiltration patterns requested by OpenClaw skills.
+  why: Prevent quiet data exfiltration and unauthorized outbound access hidden behind legitimate-looking network use.
+  what: Provides a network-audit module for reviewing destinations, ports, tunneling patterns, and data egress risk.
+  how: Uses endpoint scrutiny, exfiltration heuristics, and explicit safe-pattern checks.
+  results: Produces a network risk review with allowed, suspicious, and blocked patterns.
+  version: 1.0.0
+  updated: '2026-03-10T03:42:30Z'
+  jtbd-1: When a skill asks for network access and I need to understand whether that access is justified.
+  audit:
+    kind: module
+    author: useclawpro
+    category: Security
+    trust-score: 95
+    last-audited: '2026-02-03'
+    permissions:
+      file-read: true
+      file-write: false
+      network: false
+      shell: false
 ---
 
 # Network Watcher

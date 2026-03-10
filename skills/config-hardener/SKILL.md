@@ -1,17 +1,27 @@
 ---
 name: config-hardener
-version: 1.0.0
-description: "Audit and harden your OpenClaw configuration. Checks AGENTS.md, gateway settings, sandbox config, and permission policies for security weaknesses."
-kind: module
-author: useclawpro
-category: Security
-trustScore: 95
-permissions:
-  fileRead: true
-  fileWrite: true
-  network: false
-  shell: false
-lastAudited: "2026-02-01"
+description: Audit and harden your OpenClaw configuration. Checks AGENTS.md, gateway settings, sandbox config, and permission
+  policies for security weaknesses.
+metadata:
+  short-description: Audit and harden OpenClaw configuration, gateway settings, and permission defaults.
+  why: Prevent insecure defaults and weak policy from undermining otherwise safe skill usage.
+  what: Provides a focused module for reviewing AGENTS.md, gateway settings, sandbox config, and permission policy.
+  how: Uses a configuration checklist and hardening recommendations tied to concrete OpenClaw surfaces.
+  results: Produces configuration findings and a prioritized hardening plan for the current setup.
+  version: 1.0.0
+  updated: '2026-03-10T03:42:30Z'
+  jtbd-1: When I need to harden OpenClaw config before allowing wider skill usage on a host.
+  audit:
+    kind: module
+    author: useclawpro
+    category: Security
+    trust-score: 95
+    last-audited: '2026-02-01'
+    permissions:
+      file-read: true
+      file-write: true
+      network: false
+      shell: false
 ---
 
 # Config Hardener

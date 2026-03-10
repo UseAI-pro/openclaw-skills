@@ -1,17 +1,27 @@
 ---
 name: output-sanitizer
-version: 1.0.0
-description: "Sanitize OpenClaw agent output before display. Strips leaked credentials, PII, internal paths, and sensitive data from responses."
-kind: module
-author: useclawpro
-category: Security
-trustScore: 94
-permissions:
-  fileRead: true
-  fileWrite: false
-  network: false
-  shell: false
-lastAudited: "2026-02-03"
+description: Sanitize OpenClaw agent output before display. Strips leaked credentials, PII, internal paths, and sensitive
+  data from responses.
+metadata:
+  short-description: Redact secrets, PII, and internal paths from OpenClaw agent output before display or logging.
+  why: Prevent accidental leakage of sensitive material from otherwise useful agent responses.
+  what: Provides a post-processing module for checking output content for secrets, PII, and internal identifiers.
+  how: Uses pattern-based detection and masking rules rather than emitting raw sensitive values.
+  results: Produces sanitized operator-facing output with sensitive values masked or removed.
+  version: 1.0.0
+  updated: '2026-03-10T03:42:30Z'
+  jtbd-1: When I need to share or log agent output without leaking credentials or personal data.
+  audit:
+    kind: module
+    author: useclawpro
+    category: Security
+    trust-score: 94
+    last-audited: '2026-02-03'
+    permissions:
+      file-read: true
+      file-write: false
+      network: false
+      shell: false
 ---
 
 # Output Sanitizer

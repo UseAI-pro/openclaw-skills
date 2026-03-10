@@ -1,17 +1,27 @@
 ---
 name: prompt-guard
-version: 1.0.0
-description: "Detect and neutralize prompt injection attacks in OpenClaw skill content, user inputs, and external data sources. Prevents instruction hijacking and context manipulation."
-kind: module
-author: useclawpro
-category: Security
-trustScore: 97
-permissions:
-  fileRead: true
-  fileWrite: false
-  network: false
-  shell: false
-lastAudited: "2026-02-03"
+description: Detect and neutralize prompt injection attacks in OpenClaw skill content, user inputs, and external data sources.
+  Prevents instruction hijacking and context manipulation.
+metadata:
+  short-description: Detect prompt injection and instruction hijacking patterns in OpenClaw skill content and inputs.
+  why: Prevent hidden instructions from overriding the host agent’s intended behavior.
+  what: Provides a prompt-injection defense module for skill content, user input, and imported text.
+  how: Uses pattern detection, normalization, and severity tiers for critical and warning signals.
+  results: Produces injection findings and handling guidance before unsafe instructions are trusted.
+  version: 1.0.0
+  updated: '2026-03-10T03:42:30Z'
+  jtbd-1: When I need to check whether a skill or imported content is trying to hijack the agent prompt.
+  audit:
+    kind: module
+    author: useclawpro
+    category: Security
+    trust-score: 97
+    last-audited: '2026-02-03'
+    permissions:
+      file-read: true
+      file-write: false
+      network: false
+      shell: false
 ---
 
 # Prompt Guard

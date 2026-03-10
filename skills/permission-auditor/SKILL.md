@@ -1,17 +1,27 @@
 ---
 name: permission-auditor
-version: 1.0.0
-description: "Analyze OpenClaw skill permissions and explain exactly what each permission allows. Identifies over-privileged skills and suggests minimal permission sets."
-kind: module
-author: useclawpro
-category: Security
-trustScore: 96
-permissions:
-  fileRead: true
-  fileWrite: false
-  network: false
-  shell: false
-lastAudited: "2026-02-01"
+description: Analyze OpenClaw skill permissions and explain exactly what each permission allows. Identifies over-privileged
+  skills and suggests minimal permission sets.
+metadata:
+  short-description: Explain requested skill permissions and flag over-privileged combinations.
+  why: Keep skill permissions minimal and understandable before granting access.
+  what: Provides a permission-analysis module for mapping declared access to actual task need.
+  how: Uses permission-by-permission review plus dangerous-combination checks and least-privilege guidance.
+  results: Produces a permission fit assessment with recommended minimal access scope.
+  version: 1.0.0
+  updated: '2026-03-10T03:42:30Z'
+  jtbd-1: When I need to decide whether a skill is requesting more access than its job actually needs.
+  audit:
+    kind: module
+    author: useclawpro
+    category: Security
+    trust-score: 96
+    last-audited: '2026-02-01'
+    permissions:
+      file-read: true
+      file-write: false
+      network: false
+      shell: false
 ---
 
 # Permission Auditor

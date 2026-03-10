@@ -1,17 +1,29 @@
 ---
 name: skill-auditor
-version: 2.0.0
-description: "Comprehensive security auditor for OpenClaw skills. Checks for typosquatting, dangerous permissions, prompt injection, supply chain risks, and data exfiltration patterns — before you install anything."
-kind: auditor
-author: useclawpro
-category: Security
-trustScore: 97
-permissions:
-  fileRead: true
-  fileWrite: false
-  network: false
-  shell: false
-lastAudited: "2026-02-05"
+description: Comprehensive security auditor for OpenClaw skills. Checks for typosquatting, dangerous permissions, prompt injection,
+  supply chain risks, and data exfiltration patterns — before you install anything.
+metadata:
+  short-description: Vet any OpenClaw skill before install with a structured six-step security review.
+  why: Prevent malicious or over-privileged skills from entering the workspace unchecked.
+  what: Provides a pre-install auditor for skill metadata, permissions, dependencies, prompt injection, and exfiltration risk.
+  how: Uses a fixed six-step review protocol with severity-based verdicts and a safe-run plan.
+  results: Produces a SKILL AUDIT REPORT with verdict, red flags, and install guidance.
+  version: 2.0.0
+  updated: '2026-03-10T03:42:30Z'
+  jtbd-1: When I need to decide whether a new skill is safe to install before it touches my environment.
+  jtbd-2: When a skill update changes permissions and I need a repeatable re-vetting workflow.
+  jtbd-3: When I want evidence-based reasons to sandbox or block a skill instead of trusting reputation alone.
+  audit:
+    kind: auditor
+    author: useclawpro
+    category: Security
+    trust-score: 97
+    last-audited: '2026-02-05'
+    permissions:
+      file-read: true
+      file-write: false
+      network: false
+      shell: false
 ---
 
 # Skill Auditor

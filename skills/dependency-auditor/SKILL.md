@@ -1,17 +1,27 @@
 ---
 name: dependency-auditor
-version: 1.0.0
-description: "Audit npm, pip, and Go dependencies that OpenClaw skills try to install. Checks for known vulnerabilities, typosquatting, and malicious packages."
-kind: module
-author: useclawpro
-category: Security
-trustScore: 93
-permissions:
-  fileRead: true
-  fileWrite: false
-  network: false
-  shell: false
-lastAudited: "2026-02-03"
+description: Audit npm, pip, and Go dependencies that OpenClaw skills try to install. Checks for known vulnerabilities, typosquatting,
+  and malicious packages.
+metadata:
+  short-description: Audit skill-installed dependencies for typosquatting, hooks, and known package risk.
+  why: Catch supply-chain abuse before a skill pulls malicious packages into the environment.
+  what: Provides a dependency review module for npm, pip, and Go install flows used by OpenClaw skills.
+  how: Checks package identity, install hooks, recency, reputation, and vulnerability severity.
+  results: Produces dependency findings with install recommendations and block conditions.
+  version: 1.0.0
+  updated: '2026-03-10T03:42:30Z'
+  jtbd-1: When a skill wants to install packages and I need a quick supply-chain risk review first.
+  audit:
+    kind: module
+    author: useclawpro
+    category: Security
+    trust-score: 93
+    last-audited: '2026-02-03'
+    permissions:
+      file-read: true
+      file-write: false
+      network: false
+      shell: false
 ---
 
 # Dependency Auditor

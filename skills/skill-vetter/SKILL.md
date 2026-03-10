@@ -1,17 +1,27 @@
 ---
 name: skill-vetter
-version: 1.0.0
-description: "Security-first vetting for OpenClaw skills. Use before installing any skill from ClawHub, GitHub, or other sources. Checks for red flags, permission scope, and suspicious patterns."
-kind: module
-author: useclawpro
-category: Security
-trustScore: 97
-permissions:
-  fileRead: true
-  fileWrite: false
-  network: false
-  shell: false
-lastAudited: "2026-02-01"
+description: Security-first vetting for OpenClaw skills. Use before installing any skill from ClawHub, GitHub, or other sources.
+  Checks for red flags, permission scope, and suspicious patterns.
+metadata:
+  short-description: Run a legacy deep-vetting checklist before installing an OpenClaw skill from any source.
+  why: Preserve a conservative review path for operators who want a manual-first audit flow.
+  what: Provides a legacy pre-install security vetting module for skill review and comparison.
+  how: Uses a structured red-flag checklist focused on permissions, patterns, and suspicious instructions.
+  results: Produces a conservative manual review output for install-or-block decisions.
+  version: 1.0.0
+  updated: '2026-03-10T03:42:30Z'
+  jtbd-1: When I want a simple manual-first checklist to vet a skill before install.
+  audit:
+    kind: module
+    author: useclawpro
+    category: Security
+    trust-score: 97
+    last-audited: '2026-02-01'
+    permissions:
+      file-read: true
+      file-write: false
+      network: false
+      shell: false
 ---
 
 # Skill Vetter

@@ -1,17 +1,27 @@
 ---
 name: credential-scanner
-version: 1.0.0
-description: "Scan your project for exposed credentials, API keys, and secrets before running OpenClaw skills. Prevents accidental exfiltration."
-kind: module
-author: useclawpro
-category: Security
-trustScore: 98
-permissions:
-  fileRead: true
-  fileWrite: false
-  network: false
-  shell: false
-lastAudited: "2026-02-01"
+description: Scan your project for exposed credentials, API keys, and secrets before running OpenClaw skills. Prevents accidental
+  exfiltration.
+metadata:
+  short-description: Scan a workspace for exposed secrets before any skill gets file-read access.
+  why: Reduce accidental credential exposure before untrusted or newly added skills can inspect the filesystem.
+  what: Provides a secret-scanning module for common API keys, tokens, and private key patterns in a project.
+  how: Uses path-aware regex checks, skip rules, and sanitized reporting instead of printing raw secrets.
+  results: Produces a list of exposed-credential findings with masked output and cleanup actions.
+  version: 1.0.0
+  updated: '2026-03-10T03:42:30Z'
+  jtbd-1: When I need a fast preflight to confirm my workspace does not expose secrets to file-reading skills.
+  audit:
+    kind: module
+    author: useclawpro
+    category: Security
+    trust-score: 98
+    last-audited: '2026-02-01'
+    permissions:
+      file-read: true
+      file-write: false
+      network: false
+      shell: false
 ---
 
 # Credential Scanner

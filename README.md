@@ -57,6 +57,46 @@ Verdict: **READY / RISKY / NOT_READY**.
 
 Modules are optional: you usually don't need to install them separately.
 
+## Metadata contract
+
+This repo keeps Codex/OpenClaw-compatible frontmatter intentionally small at the top level:
+
+- `name`
+- `description`
+- `metadata.*`
+
+General skill metadata lives under `metadata.*`, while audit-specific classification lives under `metadata.audit.*`.
+This keeps the frontmatter compatible with Codex-style loaders while still giving us enough structure for catalog export and review.
+
+Example:
+
+```yaml
+---
+name: setup-auditor
+description: Audit your OpenClaw environment for credential leaks, unsafe defaults, and missing sandbox configuration.
+metadata:
+  short-description: Audit an OpenClaw environment for exposed secrets, unsafe defaults, and missing sandbox controls.
+  why: Reduce the chance that an otherwise legitimate skill can read secrets or run in an unsafe host setup.
+  what: Provides a wizard-style environment audit covering credentials, config hardening, sandbox readiness, and persistence checks.
+  how: Collects operator answers, runs a four-step review, and turns findings into a fix checklist.
+  results: Produces a SETUP AUDIT REPORT with readiness verdict, findings, and concrete remediation steps.
+  version: 2.0.0
+  updated: '2026-03-10T00:00:00Z'
+  jtbd-1: When I need to know whether my current OpenClaw environment is safe enough to run skills at all.
+  audit:
+    kind: auditor
+    author: useclawpro
+    category: Security
+    trust-score: 96
+    last-audited: '2026-02-05'
+    permissions:
+      file-read: true
+      file-write: true
+      network: false
+      shell: false
+---
+```
+
 ## Threat coverage
 
 Both auditors together cover **12/12 real-world attack types** observed in the wild (including the ClawHavoc campaign):
@@ -149,21 +189,21 @@ Treat untrusted skills as **code execution**. Default to sandboxing.
 
 <!-- catalog:start -->
 
-| Skill | Type | Category | Trust | Perms | Last audited |
-| --- | --- | --- | ---: | --- | --- |
-| [skill-auditor](skills/skill-auditor/SKILL.md) | auditor | Security | 97 | R | 2026-02-05 |
-| [setup-auditor](skills/setup-auditor/SKILL.md) | auditor | Security | 96 | R,W | 2026-02-05 |
-| [credential-scanner](skills/credential-scanner/SKILL.md) | module | Security | 98 | R | 2026-02-01 |
-| [prompt-guard](skills/prompt-guard/SKILL.md) | module | Security | 97 | R | 2026-02-03 |
-| [skill-vetter](skills/skill-vetter/SKILL.md) | module | Security | 97 | R | 2026-02-01 |
-| [incident-responder](skills/incident-responder/SKILL.md) | module | Security | 96 | R,W | 2026-02-03 |
-| [permission-auditor](skills/permission-auditor/SKILL.md) | module | Security | 96 | R | 2026-02-01 |
-| [skill-guard](skills/skill-guard/SKILL.md) | module | Security | 96 | R | 2026-02-03 |
-| [config-hardener](skills/config-hardener/SKILL.md) | module | Security | 95 | R,W | 2026-02-01 |
-| [network-watcher](skills/network-watcher/SKILL.md) | module | Security | 95 | R | 2026-02-03 |
-| [sandbox-guard](skills/sandbox-guard/SKILL.md) | module | Security | 95 | R,W | 2026-02-01 |
-| [output-sanitizer](skills/output-sanitizer/SKILL.md) | module | Security | 94 | R | 2026-02-03 |
-| [dependency-auditor](skills/dependency-auditor/SKILL.md) | module | Security | 93 | R | 2026-02-03 |
+| Skill | Type | Category | Trust | Perms | Last audited | Version |
+| --- | --- | --- | ---: | --- | --- | --- |
+| [skill-auditor](skills/skill-auditor/SKILL.md) | auditor | Security | 97 | R | 2026-02-05 | 2.0.0 |
+| [setup-auditor](skills/setup-auditor/SKILL.md) | auditor | Security | 96 | R,W | 2026-02-05 | 2.0.0 |
+| [credential-scanner](skills/credential-scanner/SKILL.md) | module | Security | 98 | R | 2026-02-01 | 1.0.0 |
+| [prompt-guard](skills/prompt-guard/SKILL.md) | module | Security | 97 | R | 2026-02-03 | 1.0.0 |
+| [skill-vetter](skills/skill-vetter/SKILL.md) | module | Security | 97 | R | 2026-02-01 | 1.0.0 |
+| [incident-responder](skills/incident-responder/SKILL.md) | module | Security | 96 | R,W | 2026-02-03 | 1.0.0 |
+| [permission-auditor](skills/permission-auditor/SKILL.md) | module | Security | 96 | R | 2026-02-01 | 1.0.0 |
+| [skill-guard](skills/skill-guard/SKILL.md) | module | Security | 96 | R | 2026-02-03 | 1.0.0 |
+| [config-hardener](skills/config-hardener/SKILL.md) | module | Security | 95 | R,W | 2026-02-01 | 1.0.0 |
+| [network-watcher](skills/network-watcher/SKILL.md) | module | Security | 95 | R | 2026-02-03 | 1.0.0 |
+| [sandbox-guard](skills/sandbox-guard/SKILL.md) | module | Security | 95 | R,W | 2026-02-01 | 1.0.0 |
+| [output-sanitizer](skills/output-sanitizer/SKILL.md) | module | Security | 94 | R | 2026-02-03 | 1.0.0 |
+| [dependency-auditor](skills/dependency-auditor/SKILL.md) | module | Security | 93 | R | 2026-02-03 | 1.0.0 |
 
 <!-- catalog:end -->
 

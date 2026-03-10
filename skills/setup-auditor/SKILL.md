@@ -1,17 +1,30 @@
 ---
 name: setup-auditor
-version: 2.0.0
-description: "Audit your OpenClaw environment for credential leaks, unsafe defaults, and missing sandbox configuration. Wizard-style: answers questions about your setup and produces a fix checklist."
-kind: auditor
-author: useclawpro
-category: Security
-trustScore: 96
-permissions:
-  fileRead: true
-  fileWrite: true
-  network: false
-  shell: false
-lastAudited: "2026-02-05"
+description: 'Audit your OpenClaw environment for credential leaks, unsafe defaults, and missing sandbox configuration. Wizard-style:
+  answers questions about your setup and produces a fix checklist.'
+metadata:
+  short-description: Audit an OpenClaw environment for exposed secrets, unsafe defaults, and missing sandbox controls.
+  why: Reduce the chance that an otherwise legitimate skill can read secrets or run in an unsafe host setup.
+  what: Provides a wizard-style environment audit covering credentials, config hardening, sandbox readiness, and persistence
+    checks.
+  how: Collects operator answers, runs a four-step review, and turns findings into a fix checklist.
+  results: Produces a SETUP AUDIT REPORT with readiness verdict, findings, and concrete remediation steps.
+  version: 2.0.0
+  updated: '2026-03-10T03:42:30Z'
+  jtbd-1: When I need to know whether my current OpenClaw environment is safe enough to run skills at all.
+  jtbd-2: When I am setting up a new host and want a repeatable readiness checklist instead of ad hoc checks.
+  jtbd-3: When I suspect prior compromise and need to re-audit persistence and exposed credentials quickly.
+  audit:
+    kind: auditor
+    author: useclawpro
+    category: Security
+    trust-score: 96
+    last-audited: '2026-02-05'
+    permissions:
+      file-read: true
+      file-write: true
+      network: false
+      shell: false
 ---
 
 # Setup Auditor

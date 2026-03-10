@@ -1,17 +1,27 @@
 ---
 name: sandbox-guard
-version: 1.0.0
-description: "Generate Docker sandbox configurations for safely running untrusted OpenClaw skills. Isolates filesystem, network, and process access."
-kind: module
-author: useclawpro
-category: Security
-trustScore: 95
-permissions:
-  fileRead: true
-  fileWrite: true
-  network: false
-  shell: false
-lastAudited: "2026-02-01"
+description: Generate Docker sandbox configurations for safely running untrusted OpenClaw skills. Isolates filesystem, network,
+  and process access.
+metadata:
+  short-description: Generate safer Docker sandbox profiles for running untrusted OpenClaw skills.
+  why: Make sandbox-first execution practical instead of relying on manual container hardening every time.
+  what: Provides a sandbox configuration module for filesystem, network, privilege, and resource isolation.
+  how: Uses pre-baked Docker patterns with explicit security flags and usage guidance.
+  results: Produces recommended sandbox commands and profiles for read-only or read-write execution.
+  version: 1.0.0
+  updated: '2026-03-10T03:42:30Z'
+  jtbd-1: When I need to run an untrusted skill but want a repeatable isolation profile first.
+  audit:
+    kind: module
+    author: useclawpro
+    category: Security
+    trust-score: 95
+    last-audited: '2026-02-01'
+    permissions:
+      file-read: true
+      file-write: true
+      network: false
+      shell: false
 ---
 
 # Sandbox Guard

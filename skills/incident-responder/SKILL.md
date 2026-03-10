@@ -1,17 +1,27 @@
 ---
 name: incident-responder
-version: 1.0.0
-description: "Step-by-step incident response for OpenClaw security breaches. Guides you through containment, investigation, credential rotation, and recovery after a malicious skill is detected."
-kind: module
-author: useclawpro
-category: Security
-trustScore: 96
-permissions:
-  fileRead: true
-  fileWrite: true
-  network: false
-  shell: false
-lastAudited: "2026-02-03"
+description: Step-by-step incident response for OpenClaw security breaches. Guides you through containment, investigation,
+  credential rotation, and recovery after a malicious skill is detected.
+metadata:
+  short-description: Guide containment, investigation, credential rotation, and recovery after a suspected malicious skill.
+  why: Shorten response time and reduce damage after a suspicious skill or compromise signal is discovered.
+  what: Provides an incident-response module tailored to OpenClaw workspace compromise scenarios.
+  how: Uses a step-by-step containment and recovery playbook with explicit operator checkpoints.
+  results: Produces a structured response plan covering containment, evidence, rotation, and recovery.
+  version: 1.0.0
+  updated: '2026-03-10T03:42:30Z'
+  jtbd-1: When I suspect a malicious skill was installed and need an immediate response checklist.
+  audit:
+    kind: module
+    author: useclawpro
+    category: Security
+    trust-score: 96
+    last-audited: '2026-02-03'
+    permissions:
+      file-read: true
+      file-write: true
+      network: false
+      shell: false
 ---
 
 # Incident Responder
