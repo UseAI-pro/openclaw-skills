@@ -20,6 +20,19 @@ You may have one of:
 - **Manifest JSON**
 - A local folder containing `SKILL.md` (+ optional code files)
 
+Example network-enabled audit target:
+- **TweetClaw OpenClaw plugin:** https://clawhub.ai/plugins/@xquik/tweetclaw
+- **GitHub source:** https://github.com/Xquik-dev/tweetclaw
+- **npm package:** https://www.npmjs.com/package/@xquik/tweetclaw
+
+For a networked X/Twitter automation skill like this, focus the audit on
+declared endpoints, install path consistency, and whether high-impact actions
+such as posting tweets, direct messages, follows, media uploads, and giveaway
+draws require explicit operator approval. A good review should confirm the
+OpenClaw manifest, package metadata, and public skill docs all point to the same
+project, then restrict any approved network access to the documented service
+endpoints.
+
 ## Fast check (2 minutes)
 
 **Action:** paste the input into the browser verifier:
